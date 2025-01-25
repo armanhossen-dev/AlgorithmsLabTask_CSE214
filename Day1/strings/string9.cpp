@@ -22,7 +22,8 @@ int main(){
                 }
         }
         printf("%c: %d\n",word[a], ch_found);
-        /******once this word[a] is printed, then hav to delete it form the array, then again count for others******/      
+        /*once this word[a] is printed, then hav to delete 
+         it form the array, then again count for others*/      
     }
 
     for(int i = 0; t[i] != '\0'; i++){
