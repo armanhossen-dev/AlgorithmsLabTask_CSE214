@@ -1,4 +1,4 @@
-#include<iostream>
+    #include<iostream>
 #include<string>
 
 using namespace std;
@@ -10,25 +10,32 @@ int main(){
     for(int i = 0; word[i] != '\0'; i++){
         word_len++;
     }
-
-    char temp, t[20];
-    int h=0;
-
-    for(int a = 0; a < word_len; a++){
-        int ch_found = 0;
-        for(int b = a; b < word_len; b++){
-                if(word[a] == word[b]){
-                    ch_found++;
-                }
+    //cout<< word_len << endl;
+    //There are 26 characters in the English alphabet.
+                            //  a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z
+    int alp[27]= {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    char alp_ch[26]={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+    //if i input any uppper case then  i have to convet every char i select to lowercase then if found then count how many
+    int i,j;
+    for(i = 0; i< word_len; i++){
+        for(j = 0; j<26;j++){
+            if(word[i] == alp_ch[j]){
+                //cout<< word[i] << "found"<<endl;
+                alp[j+1] = alp[j+1]+1; //cout<<alp[j+1] <<'\n' ;            
+            }
         }
-        printf("%c: %d\n",word[a], ch_found);
-        /*once this word[a] is printed, then hav to delete 
-         it form the array, then again count for others*/      
+    }
+    int k, h;
+    
+    for(int h = 0; h < 27; h++){
+        if(alp[h] > 0){
+        //if(word[b]==alp_ch[k])
+            k=h-1;
+            cout << alp_ch[k] <<':'<< alp[h] <<'\n';
+            //printf("%d : %d times\n", h, b[h]);
+        }
     }
 
-    for(int i = 0; t[i] != '\0'; i++){
-        cout << t[i] << endl;
-    }
-
+    //unique char koi ta, toto size er array then print    
     return 0;
 }
