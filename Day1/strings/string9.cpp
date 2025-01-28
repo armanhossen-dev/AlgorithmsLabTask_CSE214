@@ -26,16 +26,31 @@ int main(){
         }
     }
     int k, h;
-    
+    //int how_many_unique_char= 0;
     for(int h = 0; h < 27; h++){
         if(alp[h] > 0){
-        //if(word[b]==alp_ch[k])
             k=h-1;
             cout << alp_ch[k] <<':'<< alp[h] <<'\n';
-            //printf("%d : %d times\n", h, b[h]);
+            //how_many_unique_char++;
         }
     }
 
-    //unique char koi ta, toto size er array then print    
+    //unique char koi ta, toto size er array then print  
+    //make new array of size "how_many_unique_char"  then assign value also another array to store the char for the value, then if found in the word then print in serial
+/*
+armanhossenripon
+a:2 
+e:1
+h:1
+i:1
+m:1
+n:3
+o:2
+p:1
+r:2
+s:2
+
+* '2111132122'
+*/
     return 0;
 }
