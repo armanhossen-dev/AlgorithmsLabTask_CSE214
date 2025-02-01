@@ -58,6 +58,7 @@ int main(){
     //you are given a sorted array of numbers.
     //use binary search to find the position of a specific number.
     //if the number is not in the array, return -1.
+    
     int array[size];
     bst *root = NULL;
     //root = addToBst(root, 5);
@@ -70,8 +71,16 @@ int main(){
         root = addToBst(root, number);
     }
 
+    /*
+    cout << endl;
+    cout << "testing inorder: ";
+    inorder(root);
+    cout << endl << endl;
+    */
+
     //cout << "Your Entered number in inorder print:\n";
     //inorder(root);
+
     cout << "Enter the number you want to find: ";
     bst *temp = NULL;
     int nm;
@@ -88,5 +97,4 @@ int main(){
              << "index    : " << index <<endl;
         return 0;
     }
-        
 }
