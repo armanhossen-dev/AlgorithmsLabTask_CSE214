@@ -59,7 +59,7 @@ int main(){
     //use binary search to find the position of a specific number.
     //if the number is not in the array, return -1.
     
-    int array[size];
+    //int array[size];
     bst *root = NULL;
     //root = addToBst(root, 5);
     //inorder(root);

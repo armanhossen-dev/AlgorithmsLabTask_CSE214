@@ -61,7 +61,7 @@ int main(){
     bst *root = NULL;
     cout<< "Enter 5 random num to store in bst : ";
     int i=1, num;
-    while(i<=5){
+    while(i<=size){
         cin >> num;
         root = add_into_bst(root , num);
         i++;
