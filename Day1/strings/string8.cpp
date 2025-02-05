@@ -1,3 +1,10 @@
+/*
+8. Replace a Character in a String
+Replace all occurrences of a specific character with another character in a string.
+Input: "hello world", replace l with x
+Output: "hexxo worxd"
+
+*/
 #include<iostream>
 #include<string>
 using namespace std;
