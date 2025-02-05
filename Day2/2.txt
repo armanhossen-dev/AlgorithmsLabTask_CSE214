@@ -1,0 +1,224 @@
+#include<iostream>
+using namespace std;
+#define size 5
+typedef struct node{
+    int data;
+    int index;
+    struct node *left, *right;
+    node(int value,int nm){
+    data = value;
+    index = nm;
+    left = nullptr;
+    right = nullptr;
+    }
+}bst;
+
+int findINdex(bst *root,int tar){
+    if(root == nullptr){
+        return 0;
+    }
+    if(root->data == tar){
+        return root->index;
+    }
+    if(tar < root->data){
+      return  root->data = findINdex(root->left, tar);
+    }else{
+      return  root->data = findINdex(root->right, tar);
+    }
+}
+
+bst *targetNOde(bst *root,int index){
+    if(root == nullptr){
+        return 0;
+    }
+    if(root->index == index){
+        return root;
+    }
+    if(index < root->index){
+      return  root->left = targetNOde(root->left, index);
+    }else{
+      return  root->right = targetNOde(root->right, index);
+    }
+    return root;
+}
+
+
+bst *add(bst *root, int num,int index){
+    if(root == nullptr){
+        return new bst(num,index);
+    }
+    if(num < root->data){
+        root->left = add(root->left, num, index);
+    }else{
+        root->right = add(root->right, num, index);
+    }
+}
+
+int main(){
+    int num, target, c;
+    bst *root = nullptr;
+    for(c = 1; c <= size; c++){
+        cin >> num;
+        root = add(root, num, c);
+    }
+    cin >> target;
+    int index_for_target = findINdex(root, target);
+    cout << "index_for_target: "<<index_for_target << '\n';
+
+    index_for_target+=1;
+    bst *tar = targetNOde(root,index_for_target);
+    cout <<"data: " <<tar->data;
+    return 0;
+}
+
+
+
+ls1
+#include<iostream>
+#include<algorithm>  //sort(array_name, arrayname+arrayElementNumber)
+using namespace std;
+#define ashik 5
+
+int main(){
+    int arr[ashik];
+    int n = sizeof(arr)/sizeof(int);
+    for(int i=0; i<ashik; i++){
+        //scanf("%d",&arr[i]);
+        cin >>  arr[i];
+    }
+    sort(arr, arr+ashik);
+    for(int j : arr){ cout << j << " ";}
+    int target;
+    //scanf("%d",&target);
+    cin >> target;
+    for(int k = 0; k < ashik; k++){ // 1 2 3 4 5
+        if(target == arr[k]){
+            printf("%d\n",k);
+            return 0;
+        }
+    }
+    return -1;
+}
+
+
+/////////////////////////////
+//ls 7 find the second largest number
+#include <iostream>
+#include<algorithm>
+#define size 5;
+using namespace std;
+int main() { 
+    int arr[size];
+    for(int i = 0; i < size; i++){
+        cin >> arr[i];
+    }
+    sort(arr, arr+size);
+    cout<< arr[size-2];
+    return 0;
+}////////////////////
+//6 num liner search
+#include<iostream>
+using namespace std;
+
+int main(){
+    int arr[5];
+    for(int i = 0; i<5 ;i++){
+        cin >> arr[i];
+    }
+    //int tar;
+    //cin >> tar;
+    //int c=0;
+    for(int j = 0 ; j < 5; j++){
+        if(arr[j]%2 == 0){
+            cout << arr[j] << ' ';
+        }
+    }
+    return 0;
+}
+/////////////////////////
+//3 number
+#include<iostream>
+using namespace std;
+
+int main(){
+    int arr[5];
+    for(int i = 0; i<5 ;i++){
+        cin >> arr[i];
+    }
+    int tar;
+    cin >> tar;
+    int c=0;
+    for(int j = 0 ; j < 5; j++){
+        if(tar == arr[j]){
+            c++;
+        }
+    }
+    if(c!= 0){
+    //cout << c << endl;        
+        cout << "Yes\n";
+        //return 0;
+    }else{
+        cout << "No\n";
+    }
+        return 0;
+}
+//////////////////////
+//2 number
+#include<iostream>
+using namespace std;
+
+int main(){
+    int arr[5];
+    for(int i = 0; i<5 ;i++){
+        cin >> arr[i];
+    }
+    int tar;
+    cin >> tar;
+    int c=0;
+    for(int j = 0 ; j < 5; j++){
+        if(tar == arr[j]){
+            c++;
+        }
+    }
+    if(c!= 0){
+    cout << c << endl;        
+    return 0;
+    }else{
+        return -1;
+    }
+}
+//////////////////////////
+
+//liner 1
+#include<iostream>
+#include<algorithm>  //sort(array_name, arrayname+arrayElementNumber)
+using namespace std;
+#define ashik 5
+
+int main(){
+    int arr[ashik];
+    int n = sizeof(arr)/sizeof(int);
+    for(int i=0; i<ashik; i++){
+        //scanf("%d",&arr[i]);
+        cin >>  arr[i];
+    }
+    sort(arr, arr+ashik);
+    for(int j : arr){ cout << j << " ";}
+    int target;
+    //scanf("%d",&target);
+    cin >> target;
+    for(int k = 0; k < ashik; k++){ // 1 2 3 4 5
+        if(target == arr[k]){
+            printf("%d\n",k);
+            return 0;
+        }
+    }
+    return -1;
+}
+
+
+
+/////////////////////////////
+
+
+
