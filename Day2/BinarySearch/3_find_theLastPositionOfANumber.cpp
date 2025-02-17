@@ -1,4 +1,9 @@
-//fint the last position of a specific number in a sorted array, return -1, if the numer is not found.
+/*
+Find the Last Position of a Number
+Find the last position of a specific number 
+in a sorted array. Return -1 if the number is not found.
+
+*/
 #include<iostream>
 using namespace std;
 //to find the how many times a number is in the stored memory, and form that count i can find the last position

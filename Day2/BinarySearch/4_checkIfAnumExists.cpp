@@ -1,3 +1,8 @@
+/*
+Check if a Number Exists
+Given a sorted array, check if a number exists in the array. 
+Return "YES" if the number is present, otherwise return "NO."
+*/
 #include<iostream>
 using namespace std;
 
@@ -51,8 +56,8 @@ int main(){
     cin >> f;
     bst *temp = find_val(root, f);
     if(temp == nullptr){
-        cout << "not found\n" ;
+        cout << "NO.\n" ;
     }else{
-        cout << "found\n";
+        cout << "YES\n";
     }
 }

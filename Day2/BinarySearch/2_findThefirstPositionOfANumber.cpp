@@ -1,6 +1,13 @@
+/*
+Find the First Position of a Number
+Given a sorted array where a number 
+can appear multiple times, find the 
+first position of a specific number. 
+If the number is not present, return -1.
+*/
+
 #include<iostream>
 using namespace std;
-
 #define size 5
 int p = 0;
 
@@ -37,7 +44,6 @@ void inorder(bst *root){
     cout << root->data;
     inorder(root->right);
 }
-
 
 bst *search(bst *root, int val){
     if(root == NULL){

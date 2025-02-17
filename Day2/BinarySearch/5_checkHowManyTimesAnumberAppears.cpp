@@ -1,4 +1,8 @@
-//fint the last position of a specific number in a sorted array, return -1, if the numer is not found.
+/*
+Count How Many Times a Number Appears
+In a sorted array, count how many times a specific number appears. 
+Use binary search to solve it efficiently.
+*/
 #include<iostream>
 using namespace std;
 //to find the how many times a number is in the stored memory, and form that count i can find the last position

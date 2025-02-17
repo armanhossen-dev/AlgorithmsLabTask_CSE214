@@ -1,3 +1,11 @@
+/*
+Find an Element in a Sorted Array
+You are given a sorted array of numbers. 
+Use binary search to find the position 
+of a specific number. If the number is 
+not in the array, return -1.
+*/
+
 #include<iostream>
 #define size 6
 using namespace std;
